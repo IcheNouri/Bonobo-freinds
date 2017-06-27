@@ -1,0 +1,19 @@
+{% if bonobo is defined %}
+        <h1>Bonobo {{ bonobo.nom }}</h1>
+        <ul>
+                <li>{{ bonobo.nom|e }}</li>
+                <li>{{ bonobo.race|e }}</li>
+                <li>{{ bonobo.famille|e }}</li>
+                <li>{{ bonobo.nourriture|e }}</li>
+        </ul>
+        <a href="/bonobo-edit/{{ bonobo.id }}">Modifier</a>
+        <a href="/bonobo-delete/{{ bonobo.id }}">Supprimer</a>
+{% endif %}
+
+{% if (success is defined) and (success == false) %}
+        <p>Bonobo n'existe pas</p>
+{% endif %}
+
+{% if (success is defined) and (success == true) %}
+        <p>Bonobo a été bien supprimé <a href="/">revenir vers la page d'acceuil</a></p>
+{% endif %}

@@ -1,0 +1,19 @@
+AppBundle\Entity\Bonobo:
+    constraints:
+            - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nom
+    properties:
+        nom:
+            - NotBlank: ~
+            - Type: string
+        age:
+            - NotBlank: ~
+            - Type: numeric
+        famille:
+            - NotBlank: ~
+            - Type: string
+        race:
+            - NotBlank: ~
+            - Type: string
+        nourriture:
+            - NotBlank: ~
+            - Type: string

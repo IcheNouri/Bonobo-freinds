@@ -1,0 +1,8 @@
+<h1>Liste des bonobos</h1>
+<ul>
+    {% for bonobo in bonobos %}
+        <a href="/bonobo/{{ bonobo.id }}"><li>{{ bonobo.nom|e }}</li></a>
+    {% endfor %}
+</ul>
+
+<a href="/add-bonobo">Ajouter un ami</a>
